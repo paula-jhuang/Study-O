@@ -4,25 +4,47 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="@color/lightBlue"
     tools:context=".FirstFragment">
 
     <TextView
-        android:id="@+id/textview_first"
+        android:id="@+id/homepage_title"
+        style="@style/AppTitle.Text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/hello_first_fragment"
-        app:layout_constraintBottom_toTopOf="@id/button_first"
+        android:layout_marginTop="32dp"
+        android:layout_marginBottom="54dp"
+        android:text="@string/appTitle"
+        app:layout_constraintBottom_toTopOf="@+id/studyingHome"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
-        android:id="@+id/button_first"
+
+    <ImageView
+        android:id="@+id/studyingHome"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/next"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="54dp"
+        android:contentDescription="@string/home_study"
+        android:src="@drawable/ic_home_studying"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/homepage_title" />
+
+    <Button
+        android:id="@+id/button_first"
+        style="@style/Button.Purple"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:layout_marginBottom="64dp"
+        android:text="@string/newTask"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/textview_first" />
+        app:layout_constraintTop_toBottomOf="@id/studyingHome" />
 </androidx.constraintlayout.widget.ConstraintLayout>

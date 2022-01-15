@@ -7,21 +7,71 @@
     tools:context=".SecondFragment">
 
     <TextView
-        android:id="@+id/textview_second"
+        android:id="@+id/focus"
+        style="@style/AppTitle.Text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintBottom_toTopOf="@id/button_second"
+        android:layout_marginBottom="150dp"
+        android:text="@string/focus"
+        app:layout_constraintBottom_toTopOf="@+id/timer_bottom_background"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/timer_bottom_background"
+        android:layout_width="match_parent"
+        android:layout_height="500dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="300dp"
+        android:src="@drawable/timer_background"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/timer_circle_background"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="35dp"
+        android:src="@drawable/timer_circle_background"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:textAlignment="center"
+        app:layout_constraintBottom_toTopOf="@+id/cycle_count"
+        app:layout_constraintTop_toBottomOf="@+id/focus"
+        tools:layout_editor_absoluteX="80dp" />
+
+    <TextView
+        android:id="@+id/cycle_count"
+        style="@style/Paragraph.Text"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:layout_marginTop="435dp"
+        android:text="Cycle"
+        android:textAlignment="center" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="175dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:srcCompat="@android:drawable/ic_dialog_email" />
 
     <Button
         android:id="@+id/button_second"
+        style="@style/Button.Purple"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/previous"
+        android:layout_marginBottom="250dp"
+        android:text="@string/start"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/textview_second" />
+        app:layout_constraintTop_toBottomOf="@id/cycle_count" />
 </androidx.constraintlayout.widget.ConstraintLayout>
