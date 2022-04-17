@@ -42,6 +42,29 @@
         app:layout_constraintTop_toBottomOf="@+id/focus"
         tools:layout_editor_absoluteX="80dp" />
 
+    <me.zhanghai.android.materialprogressbar.MaterialProgressBar
+        android:id="@+id/progress_circular"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:minWidth="260dp"
+        android:minHeight="260dp"
+        app:layout_constraintBottom_toBottomOf="@id/timer_circle_background"
+        app:layout_constraintEnd_toEndOf="@id/timer_circle_background"
+        app:layout_constraintStart_toStartOf="@id/timer_circle_background"
+        app:layout_constraintTop_toTopOf="@id/timer_circle_background" />
+
+    <TextView
+        android:id="@+id/text_countdown"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="25:00"
+        android:textSize="50sp"
+        android:textAppearance="@style/CountDown.Text"
+        app:layout_constraintBottom_toBottomOf="@id/timer_circle_background"
+        app:layout_constraintEnd_toEndOf="@id/timer_circle_background"
+        app:layout_constraintStart_toStartOf="@id/timer_circle_background"
+        app:layout_constraintTop_toTopOf="@id/timer_circle_background" />
+
     <TextView
         android:id="@+id/cycle_count"
         style="@style/Paragraph.Text"
@@ -53,7 +76,7 @@
         android:textAlignment="center" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/fab"
+        android:id="@+id/button_second"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="175dp"
@@ -64,7 +87,7 @@
         app:srcCompat="@android:drawable/ic_dialog_email" />
 
     <Button
-        android:id="@+id/button_second"
+        android:id="@+id/button_start"
         style="@style/Button.Purple"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -72,6 +95,32 @@
         android:text="@string/start"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cycle_count" />
+
+    <Button
+        android:id="@+id/button_stop"
+        style="@style/Button.Purple"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="250dp"
+        android:text="Stop"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.114"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cycle_count" />
+
+    <Button
+        android:id="@+id/button_pause"
+        style="@style/Button.Purple"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="250dp"
+        android:text="Pause"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.876"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/cycle_count" />
 </androidx.constraintlayout.widget.ConstraintLayout>
